@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Playfair+Display:wght@400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cinzel Decorative", serif;
+}
+
+html{
+    background-color: black;
+}
+
+html, body {
+    background: black;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----- Title ----- */
+
+.home-header {
+    position: relative; 
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 32px;
+    color: hsl(0 0 60%); 
+    font-weight: 400; 
+    letter-spacing: 5px; 
+    position: absolute;
+    text-align:center;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.home-page-quote {
+    font-size: 14px; 
+    color: hsl(0 0 45%); 
+    letter-spacing: 3px;
+    line-height: 1.5; 
+    text-align: center; 
+    font-weight: 400;
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ----- Accessibility Buttons -----*/
+
+.access-buttons{
+    display: flex;
+    padding: 20px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+.access-buttons a {
+    text-decoration: none;
+}
+
+.access-buttons span {
+    color: #000000;
+    background-color: #1e1e1e;
+    font-size: 50px; 
+    border-radius: 30%;
+    cursor: pointer;
+    display: flex;
+    text-decoration: none;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48;
+}
+
+.access-buttons .home-button {
+    margin-right: 20px; 
+    color:#555555;
+    transition: 0.5s ease-out;
+}
+
+.access-buttons .home-button:hover{
+    background-color: #242323;
+    color:hsl(0 0 100%);
+    transform: scale(1.05);
+    border-color: #f0f0f0; 
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2), 
+                0 0 20px rgba(10, 150, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ----- About me Content ----- */
+
+.PFP{
+    border-radius: 55%;
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.about-me-content {
+    position: absolute;
+    top: 300px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 800px; 
+    padding: 20px;
+    border-top: 1px solid #2e2e2e;
+    text-align: center;
+}
+
+.name-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: hsl(0 0 90%);
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.course-info {
+    font-family: "Noto Serif", serif;
+    font-size: 16px;
+    color: hsl(0 0 65%);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-heading {
+    font-family: "Cinzel Decorative", serif;
+    font-size: 14px;
+    color: hsl(0 0 75%);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #2e2e2e;
+    padding-bottom: 5px;
+}
+
+.education-list, .cs-passion, .cs-intro {
+    font-family: "Noto Serif", serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: hsl(0 0 55%); 
+}
+
+.education-list {
+    list-style-type: none; 
+    padding-left: 0;
+    font-family: "Noto Serif", serif;
+    font-size: 12px;
+}
+
+.education-list li::before {
+    content: "•"; 
+    color: hsl(0 0 75%);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* ----- Main Navigation Links ----- */
+
+.main-navigation {
+    position: absolute;
+    top: 550px;
+    left: 200px;
+    display: flex; 
+    gap: 40px; 
+    font-size: 14px;
+}
+
+.nav-link {
+    text-decoration: none; 
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+    color: #4a4a4a; 
+    letter-spacing: 2px;
+    padding-bottom: 5px; 
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.main-navigation .nav-link:hover .nav-text {
+    color: #f0f0f0; 
+    border-bottom: 1px solid #f0f0f0; 
+    transform: scale(1.05); 
+}
+
+.nav-text {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-logo {
+    position: absolute;
+    font-size: 24px;
+    color: #ffffff;
+    left: 50%; 
+    transform: translate(-50%, 100%); 
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #fff, /* EPIC GLOW EFFECTTT */
+        0 0 20px #00aaff; 
+}
+
+.nav-link:hover .social-logo {
+    opacity: 1;
+    transform: translate(-50%, -100%); 
+}
+
+.nav-link:hover .nav-text {
+    transform: translateY(12px); 
+}

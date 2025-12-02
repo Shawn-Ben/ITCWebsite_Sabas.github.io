@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Playfair+Display:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cinzel Decorative", serif;
+}
+
+body {
+    background: black;
+}
+
+/* ---------------- TITLE ---------------- */
+
+.home-header {
+    width: 100%;
+    color: #555;
+    text-align: center;
+    padding: 40px 0;
+    position: relative;
+    min-height: 100px;
+}
+
+.HomePageTitle {
+    width: 200px;
+}
+
+.home-page-quote{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ---------------- Accessibility Buttons ----------------*/
+
+.access-buttons{
+    display: flex;
+    padding: 20px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    size: 100%;
+    transition: 0.5s ease-out;
+}
+
+.access-buttons a {
+    text-decoration: none;
+}
+
+.access-buttons a:first-child {
+    margin: 0;
+}
+
+.access-buttons span {
+    color: #555555;
+
+    font-size: 50px; 
+    border-radius: 30%;
+    cursor: pointer;
+    text-decoration: none;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48;
+}
+
+.access-buttons .about-me{
+    color:#555555;
+    background-color: #1e1e1e;
+    transition: 0.5s ease-out;
+    font-size: 50px;
+}
+
+.access-buttons .about-me:hover{
+    background-color: #242323;
+    color:hsl(0 0 100%);
+    transform: scale(1.05);
+    border-color: #f0f0f0; 
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2), 
+                0 0 20px rgba(10, 150, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ---------------- SLIDER CONTAINER ---------------- */
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.card-wrapper.swiper {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    position: relative;
+}
+
+/* ---------------- SWIPER DEFAULT STRUCTURE ---------------- */
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    width: auto;          
+    flex-shrink: 0;
+}
+
+/* ---------------- CARD STYLING ---------------- */
+
+.card-list {
+    list-style: none;
+}
+
+.card-item {
+    display: flex;
+}
+
+.card-link {
+    display: block;
+    width: 500px;
+    background: hsl(0 0 5%);
+    padding: 18px 18px 60px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: 0.5s ease-out;
+}
+
+.card-link:hover {
+    border-color: rgb(61, 60, 60);
+    transform: scale(1.03);
+}
+
+.card-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.badge {
+    color: hsl(0 0 25%);
+    background: hsl(0 0 40%);
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    width: fit-content;
+    border-radius: 50px;
+    transition: ease-in 0.3s;
+}
+
+.card-link:hover .badge {
+    color: hsl(0 0 100%);
+    background: hsl(0 0 50%);
+    font-size:12px;
+}
+
+.card-title {
+    font-size: 12px;
+    color: gray;
+    text-align: center;
+    font-weight: 600;
+}
+
+.card-link:hover .card-title {
+    font-size: 12px;
+    color: hsl(0 0 100%);
+}
+
+.card-button {
+    height: 35px;
+    width: 35px;
+    color: gray;
+    border-radius: 50%;
+    margin: 30px auto 5px;
+    display: block;
+    background: none;
+    cursor: pointer;
+    transition: 0.3s;
+    bottom: 18px;
+    left: 18px;
+    position: absolute;
+}
+
+.card-link:hover .card-button {
+    transform: rotate(-45deg);
+    color: hsl(0 0 100%);
+    background: gray;
+}
+
+/* ---------------- SWIPER NAV + PAGINATION ---------------- */
+
+.swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: gray;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.swiper-button-prev{
+    color: gray;
+    width: 45px;
+    height: 45px;
+    left: -80px;
+    z-index: 99; 
+}
+
+.swiper-button-next {
+    color: gray;
+    width: 45px;
+    height: 45px;
+    right: -80px;
+    z-index: 99; 
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    color: gray !important;
+}
+
+/* -------------- RESPONSIVE FIXES -------------- */
+
+@media (max-width: 900px) {
+    .card-link {
+        width: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}
